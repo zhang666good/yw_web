@@ -1,0 +1,114 @@
+/* ========================================
+   欲望检测器 Pro - 全局视觉设计系统
+   依据 UI 设计规范 V1.2 第11章
+   ======================================== */
+
+:root {
+  /* ----- 基础底色 ----- */
+  --bg-page: linear-gradient(135deg, #0a0a18, #101024);
+  --bg-page-vertical: linear-gradient(180deg, #0a0a18, #101024);
+  --bg-card: rgba(25, 25, 50, 0.6);
+  --bg-card-hover: rgba(25, 25, 50, 0.75);
+  --bg-blur: 12px;
+
+  /* ----- 文字色阶 ----- */
+  --text-primary: #ffffff;
+  --text-secondary: #c8c8e0;
+  --text-tertiary: #9ca3af;
+  --text-muted: rgba(255, 255, 255, 0.4);
+  --text-disabled: #4b5563;
+
+  /* ----- 六维专属色系 (渐变) ----- */
+  --color-love-start: #f87ad8;
+  --color-love-end: #b066ff;
+  --color-love-bg: rgba(248, 122, 216, 0.15);
+
+  --color-control-start: #ff6b6b;
+  --color-control-end: #ff9557;
+  --color-control-bg: rgba(255, 107, 107, 0.15);
+
+  --color-achievement-start: #ffd064;
+  --color-achievement-end: #ff9f43;
+  --color-achievement-bg: rgba(255, 208, 100, 0.15);
+
+  --color-freedom-start: #4cd1e0;
+  --color-freedom-end: #36bffb;
+  --color-freedom-bg: rgba(76, 209, 224, 0.15);
+
+  --color-pleasure-start: #ff9ecd;
+  --color-pleasure-end: #ff7eb9;
+  --color-pleasure-bg: rgba(255, 158, 205, 0.15);
+
+  --color-knowledge-start: #a8b8d8;
+  --color-knowledge-end: #829fff;
+  --color-knowledge-bg: rgba(168, 184, 216, 0.15);
+
+  /* ----- 功能色 ----- */
+  --color-primary-start: #7b61ff;
+  --color-primary-end: #5b40e9;
+  --color-primary-glow: rgba(123, 97, 255, 0.35);
+  --color-highlight: #63e4ff;
+
+  /* ----- 边框 ----- */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: 1px solid rgba(255, 255, 255, 0.06);
+  --border-card-hover: 1px solid rgba(255, 255, 255, 0.12);
+
+  /* ----- 圆角 ----- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 50px;
+
+  /* ----- 字体层级 ----- */
+  --font-stack: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-title: 26px;
+  --font-size-subtitle: 18px;
+  --font-size-body: 16px;
+  --font-size-option: 15px;
+  --font-size-small: 13px;
+  --font-size-xs: 12px;
+
+  --line-height-body: 1.8;
+  --letter-spacing-title: 1px;
+
+  /* ----- 间距 ----- */
+  --safe-margin: 15px;
+  --safe-margin-lg: 20px;
+
+  /* ----- 动效 ----- */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.35s;
+  --duration-slow: 0.6s;
+
+  /* ----- 海报专属 ----- */
+  --poster-width: 1080px;
+  --poster-height: 1920px;
+}
+
+/* ----- 磨砂玻璃通用效果 ----- */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(var(--bg-blur));
+  -webkit-backdrop-filter: blur(var(--bg-blur));
+  border: var(--border-card);
+  border-radius: var(--radius-md);
+}
+
+/* ----- 渐变文字通用 ----- */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary-start), var(--color-primary-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ----- 六维维度色映射 (用于 bar fill) ----- */
+.dim-bar-Love    { background: linear-gradient(90deg, var(--color-love-start), var(--color-love-end)); }
+.dim-bar-Control { background: linear-gradient(90deg, var(--color-control-start), var(--color-control-end)); }
+.dim-bar-Achievement { background: linear-gradient(90deg, var(--color-achievement-start), var(--color-achievement-end)); }
+.dim-bar-Freedom { background: linear-gradient(90deg, var(--color-freedom-start), var(--color-freedom-end)); }
+.dim-bar-Pleasure { background: linear-gradient(90deg, var(--color-pleasure-start), var(--color-pleasure-end)); }
+.dim-bar-Knowledge { background: linear-gradient(90deg, var(--color-knowledge-start), var(--color-knowledge-end)); }
