@@ -1,15 +1,11 @@
 {
-  "buildCommand": "node ./node_modules/vite/bin/vite.js build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "installCommand": "npm install",
+  "installCommand": "npm install && chmod +x node_modules/.bin/vite",
   "rewrites": [
     {
       "source": "/:path*",
       "destination": "/index.html"
     }
-  ],
-  "github": {
-    "silent": true
-  }
+  ]
 }
